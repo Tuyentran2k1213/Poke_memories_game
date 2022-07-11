@@ -37,15 +37,13 @@ export default {
 
                 if(this.rules.length === 2 && this.rules[0].cardId === this.rules[1].cardId){
 
-                    router.push('/result');
-
                     this.$refs[`card_${this.rules[0].index}`][0].onChoosen();
                     this.$refs[`card_${this.rules[1].index}`][0].onChoosen();
                     this.rules = [];
 
                     const done = document.querySelectorAll('.cardField .card.disabled')
                     if(done.length === Math.pow(this.$route.params.level, 2) - 2){
-                        // this.$route.push = '/result';
+                        router.push('/result');
                     }
 
                 } else if(this.rules.length === 2 && this.rules[0].cardId !== this.rules[1].cardId) {
