@@ -8,7 +8,7 @@
             </div>
             <div class="card_face card-back-face isRotate">
                 <div class="card-title">
-                    <img :src="`../../../assets/images/${cardImg.cardId}.png`" alt="front face">
+                    <img :src="`/assets/${cardImg.cardId}.png`" alt="front face">
                 </div>
             </div>
         </div>
